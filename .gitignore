@@ -25,6 +25,7 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 *.sublime-project
 *.sublime-workspace
 .idea
@@ -62,3 +63,6 @@ packages/react-devtools-inline/dist
 packages/react-devtools-shell/dist
 packages/react-devtools-timeline/dist
 
+=======
+.env
+>>>>>>> 3d81485 (Aggiungi l'esempio per il file .env che contiene la chiave API di Google)
