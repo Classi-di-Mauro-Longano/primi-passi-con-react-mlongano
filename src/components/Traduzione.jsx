@@ -1,5 +1,15 @@
-export function Traduzione() {
+import PropTypes from 'prop-types';
+
+export function Traduzione({lingua, testo}) {
   return (
-      <h2>Traduzione placeholder</h2>
+    <>
+      <h2>Testo tradotto in {lingua}</h2>
+      <p>{testo}</p>
+    </>
   )
 }
+
+Traduzione.propTypes = {
+  lingua: PropTypes.string.isRequired,
+  testo: PropTypes.string.isRequired
+};
