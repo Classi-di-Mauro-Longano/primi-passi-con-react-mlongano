@@ -15,7 +15,7 @@ export function findItemByKeyValue ( key, value, array ) {
  + La funzione restituita da `debounce` può essere chiamata nuovamente come effetto collaterale, ad esempio da un hook `useEffect`.
  + Il meccanismo di cancellazione sfrutta la chiusura ("closure") della funzione `debounce` che mantiene lo stato tra le chiamate.
  */
-export const debounce = ( fn ) => {
+export const debounce = ( fn, time=300 ) => {
   let id = null;
 
   return ( ...args ) => {
@@ -25,6 +25,6 @@ export const debounce = ( fn ) => {
     id = setTimeout( () => {
       fn( ...args );
       id = null;
-    }, 300 );
+    }, time );
   };
 };

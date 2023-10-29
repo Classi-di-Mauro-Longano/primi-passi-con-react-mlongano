@@ -51,7 +51,8 @@ const traduci = debounce(
     } catch (error) {
       console.error(error);
     }
-  }
+  },
+  500,
 )
 
 
