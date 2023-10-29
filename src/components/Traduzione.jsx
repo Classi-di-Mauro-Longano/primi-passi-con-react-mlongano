@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 export function Traduzione({lingua, testo}) {
   return (
     <>
-      <h2>Testo tradotto in {lingua}</h2>
+      <h2>Testo tradotto in {lingua.nome}</h2>
       <p>{testo}</p>
     </>
   )

@@ -1,28 +1,37 @@
-export function Lingua() {
+import PropTypes from 'prop-types';
+import './Lingua.css';
+
+export function Lingua ( { linguaSelezionata, cambiaLingua } ) {
   return (
     <section className="selezione_lingua">
       <label>Seleziona la lingua</label>
-      <div className="select">
-        <ul>
-          {LANGUAGES.map((language) => (
-            <li key={language.value} value={language.value}>
-              {language.label}
+        <ul className='lista-lingue'>
+          {LINGUE.map( ( lingua ) => (
+            <li
+              className={`btn lingua ${linguaSelezionata.codice === lingua.codice ? "selected" : ""}`}
+              key={lingua.codice}
+              onClick={() => cambiaLingua( lingua )}
+            >
+              {lingua.nome}
             </li>
-          ))}
+          ) )}
         </ul>
-      </div>
     </section>
-  )
+  );
 }
 
-const LANGUAGES = [
-  { label: "Afrikaans", value: "af" },
-  { label: "Arabo", value: "ar" },
-  { label: "Francese", value: "fr" },
-  { label: "Hindi", value: "hi" },
-  { label: "Inglese", value: "en" },
-  { label: "Giapponese", value: "ja" },
-  { label: "Portuguese", value: "pt" },
-  { label: "Spanish", value: "es" },
-];
+Lingua.propTypes = {
+  linguaSelezionata: PropTypes.string.isRequired,
+  cambiaLingua: PropTypes.func.isRequired,
+};
 
+const LINGUE = [
+  { nome: "Afrikaans", codice: "af" },
+  { nome: "Arabo", codice: "ar" },
+  { nome: "Francese", codice: "fr" },
+  { nome: "Hindi", codice: "hi" },
+  { nome: "Inglese", codice: "en" },
+  { nome: "Giapponese", codice: "ja" },
+  { nome: "Portuguese", codice: "pt" },
+  { nome: "Spagnolo", codice: "es" },
+];

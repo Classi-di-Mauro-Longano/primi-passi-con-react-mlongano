@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 function App() {
   const [testo, setTesto] = useState('');
+  const [lingua, setLingua] = useState({nome: 'italiano', codice: 'it'});
   return (
     <>
       {/* Esempio di utilizzo di useState
@@ -16,8 +17,8 @@ function App() {
       */}
       <Intestazione />
       <Testo setTesto={setTesto} />
-      <Lingua />
-      <Traduzione testo={testo} lingua={"italiano"} />
+      <Lingua linguaSelezionata={lingua} cambiaLingua={setLingua} />
+      <Traduzione testo={testo} lingua={lingua} />
     </>
   );
 }
