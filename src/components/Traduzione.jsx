@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { findItemByKeyValue, debounce } from '../utils/utils';
 import { lingue } from '../data/lingue';
+import './Traduzione.css';
 
 import { useState, useEffect } from 'react';
 export function Traduzione({ lingua, testo }) {
@@ -13,18 +14,18 @@ export function Traduzione({ lingua, testo }) {
   }, [lingua, testo, API_KEY]);
 
   return (
-    <>
-      <h2>Testo tradotto in {lingua.nome}</h2>
+    <section className='traduzione'>
+      <h2 className='intestazione' >Testo tradotto in <em>{lingua.nome}</em></h2>
       {
         traduzione === null
-          ? <p>Traduzione in corso...</p>
+          ? <p className='transient'>Traduzione in corso...</p>
           : <>
-              <p>{traduzione.replace("&#39;", "'")}</p>
-              <p>Lingua di partenza: {linguaIniziale}</p>
+              <p className='traduzione'>{traduzione.replace("&#39;", "'")}</p>
+              <p>Lingua di partenza: <em>{linguaIniziale}</em></p>
             </>
 
       }
-    </>
+    </section>
   );
 }
 

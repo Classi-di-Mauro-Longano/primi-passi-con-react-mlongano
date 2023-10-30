@@ -3,3 +3,8 @@
 ## Wireframe del progetto
 
 ![Wireframe del progetto](./docs/wireframe.png)
+
+
+## Possibile risultato
+
+![Possibile risultato](./docs/possibileRisultato.png)

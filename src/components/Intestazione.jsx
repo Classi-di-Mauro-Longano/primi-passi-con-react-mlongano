@@ -1,5 +1,7 @@
+import './Intestazione.css';
+
 export function Intestazione () {
   return (
-    <h1>Traduttore</h1>
+    <h1 className='titolo'>Traduttore</h1>
   )
 }

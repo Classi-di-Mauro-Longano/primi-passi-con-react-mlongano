@@ -4,7 +4,20 @@
   align-items: center;
   margin: 1rem;
 }
-
+.selezione_lingua label {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #212529;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px 1px #616161;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .lista-lingue {
   display: flex;
   flex-wrap: wrap;
