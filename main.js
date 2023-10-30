@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 function Helloworld() {
-  return React.createElement('h1', null, 'Hello, world!');
+  return <h1>Hello World</h1>;
 }
 
 ReactDOM.render(
-  React.createElement(Helloworld, null),
+  <Helloworld />,
   document.getElementById('uno')
 );
 
