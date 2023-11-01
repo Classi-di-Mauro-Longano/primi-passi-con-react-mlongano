@@ -14,14 +14,14 @@ export function Traduzione({ lingua, testo }) {
   }, [lingua, testo, API_KEY]);
 
   return (
-    <section className='traduzione'>
-      <h2 className='intestazione' >Testo tradotto in <em>{lingua.nome}</em></h2>
+    <section className='flex flex-col items-center justify-center pt-4 mt-4 border-t-4'>
+      <h2 className='' >Testo tradotto in <em className='text-green-700 text-shadow-sm shadow-gray-700'>{lingua.nome}</em></h2>
       {
         traduzione === null
-          ? <p className='transient'>Traduzione in corso...</p>
+          ? <p className='italic'>Traduzione in corso...</p>
           : <>
-              <p className='traduzione'>{traduzione.replace("&#39;", "'")}</p>
-              <p>Lingua di partenza: <em>{linguaIniziale}</em></p>
+            <p className='italic text-violet-800'>{traduzione.replace( "&#39;", "'" )}</p>
+            <p>Lingua di partenza: <em className='text-shadow-sm shadow-slate-700'>{linguaIniziale}</em></p>
             </>
 
       }

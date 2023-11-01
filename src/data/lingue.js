@@ -6,6 +6,6 @@ export const lingue = [
   { nome: "Hindi", codice: "hi" },
   { nome: "Inglese", codice: "en" },
   { nome: "Giapponese", codice: "ja" },
-  { nome: "Portuguese", codice: "pt" },
+  { nome: "Portoghese", codice: "pt" },
   { nome: "Spagnolo", codice: "es" },
 ];
