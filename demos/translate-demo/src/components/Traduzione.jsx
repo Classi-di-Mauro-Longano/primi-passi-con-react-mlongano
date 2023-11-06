@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { findItemByKeyValue, debounce } from '../utils/utils';
 import { lingue } from '../data/lingue';
-import './Traduzione.css';
 
 import { useState, useEffect } from 'react';
 export function Traduzione({ lingua, testo }) {
