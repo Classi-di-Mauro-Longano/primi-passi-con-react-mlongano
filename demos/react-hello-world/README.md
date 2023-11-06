@@ -55,5 +55,11 @@ ReactDOM.render(
 );
 ```
 
-## Parcel boundler
-React necessita di un bundler per poter funzionare correttamente. Per questi primi esempi utilizzeremo Parcel, un bundler molto semplice da utilizzare. Per installarlo basta eseguire il comando `npm install -D parcel`. Per eseguire il codice basta eseguire il comando `npx parcel index.html` nella cartella del progetto.
+## Il bundler Parcel
+Le applicazioni sviluppate con React devono essere "*transpiled*" in Javascript in modo che il browser possa eseguirle. Uno dei compiti di un bundler è appunto fare questo passo.
+
+Per questi primi esempi utilizzeremo Parcel, un bundler molto semplice da utilizzare.
+
+Per installarlo basta eseguire il comando `npm install -D parcel`.
+
+Per eseguire il codice basta eseguire il comando `npx parcel index.html` nella cartella del progetto.
